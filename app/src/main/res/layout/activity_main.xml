@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="in.dsec.mdsohel.browser.MainActivity">
+
+    <!-- creating a linear layout for edittext and go button. -->
+    <LinearLayout
+        android:weightSum="1"
+        android:layout_weight=".10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- creating a edittext field -->
+        <EditText
+            android:id="@+id/edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".70"
+            android:background="@null"/>
+
+        <!-- creating a button for go -->
+        <Button
+            android:background="#F62459"
+            android:textColor="#FFFFFF"
+            android:id="@+id/btn_go"
+            android:text="GO"
+            android:layout_weight=".30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <!-- progress bar to show the loading of a page -->
+    <ProgressBar
+        android:id="@+id/progess"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_gravity="top"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_marginTop="3dp"/>
+
+    <!-- to show the web content of a web page url -->
+    <WebView
+        android:id="@+id/webview"
+        android:layout_weight=".80"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </WebView>
+
+    <!-- this linear layout is for the four buttons -->
+    <LinearLayout
+        android:weightSum="1"
+        android:layout_weight=".10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- this for backward button. -->
+        <Button
+            android:background="#F62459"
+            android:textColor="#FFFFFF"
+            android:id="@+id/btn_backward"
+            android:layout_weight=".25"
+            android:text="Back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- this is for forward button -->
+        <Button
+            android:background="#F62459"
+            android:textColor="#FFFFFF"
+            android:id="@+id/btn_forward"
+            android:layout_weight=".25"
+            android:text="Forward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- this is for clear button -->
+        <Button
+            android:background="#F62459"
+            android:textColor="#FFFFFF"
+            android:id="@+id/btn_clear"
+            android:layout_weight=".25"
+            android:text="Clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- this is for reload button -->
+        <Button
+            android:background="#F62459"
+            android:textColor="#FFFFFF"
+            android:id="@+id/btn_reload"
+            android:layout_weight=".25"
+            android:text="Reload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</LinearLayout>
